@@ -1,0 +1,11 @@
+<html ng-app>
+ <!-- Body tag augmented with ngController directive  -->
+ <body>
+    <div>
+        Task : <input type="text" name="task"/><button name="add" (click)="addTask()">add</button>
+    </div> 
+    <ul *ngFor="let task of tasks">
+        <li>{{ task.title.rendered }}<button name="add"(click)="updateTask()">update</button>&nbsp;<button name="add"(click)="deleteTask()">delete</button></li>
+    </ul>
+ </body>
+</html>
