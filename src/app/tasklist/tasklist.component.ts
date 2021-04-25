@@ -16,27 +16,27 @@ export class TasklistComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-
     this.apiService.getTask().subscribe((data) => {
       console.log(data);
       this.tasks = data;
     });
   }
 
-  addTask(): void {
-    this.apiService.addTask('Task from angular').subscribe((data) => {
+  addTask(task): void {
+    this.apiService.addTask(task).subscribe((data) => {
+      alert(task);
       console.log(data);
     });
   }
 
-  updateTask(): void {
-    this.apiService.updateTask().subscribe((data) => {
+  updateTask(id): void {
+    this.apiService.updateTask(id).subscribe((data) => {
       console.log(data);
     });
   }
 
-  deleteTask(): void {
-    this.apiService.deleteTask().subscribe((data) => {
+  deleteTask(id): void {
+    this.apiService.deleteTask(id).subscribe((data) => {
       console.log(data);
     });
   }

@@ -44,7 +44,7 @@ export class ApiService {
     })
    }
 
-    return this.httpClient.post<any>('http://localhost/wp-playground/wp-json/wp/v2/tz_todo', headers);
+    return this.httpClient.post<any>('http://localhost/wp-playground/wp-json/wp/v2/tz_todo/', headers);
   }
 
   public updateTask(data: any) {
@@ -57,7 +57,7 @@ export class ApiService {
     })
    }
 
-    return this.httpClient.post<any>('http://localhost/wp-playground/wp-json/wp/v2/tz_todo', headers);
+    return this.httpClient.post<any>('http://localhost/wp-playground/wp-json/wp/v2/tz_todo/check/'+ data + ')', headers);
   }
 
   public deleteTask(data: any) {
@@ -70,7 +70,7 @@ export class ApiService {
     })
    }
 
-    return this.httpClient.post<any>('http://localhost/wp-playground/wp-json/wp/v2/tz_todo', headers);
+    return this.httpClient.post<any>('http://localhost/wp-playground/wp-json/wp/v2/tz_todo/delete/' + data +  ')', headers);
   }
 
 };
